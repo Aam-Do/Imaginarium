@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 649.75305, g: 979.1393, b: 1644.3613, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -148,7 +148,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157207112}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 181732822}
   - component: {fileID: 181732826}
   - component: {fileID: 181732827}
+  - component: {fileID: 181732828}
   m_Layer: 0
   m_Name: ParticleSpirit
   m_TagString: Untagged
@@ -468,7 +469,7 @@ MonoBehaviour:
   trackedJoint: 11
   relToInitialPos: 0
   invertedZMovement: 0
-  transformOffset: {x: 0, y: 0, z: 0}
+  transformOffset: {x: 0, y: 0.9, z: 0}
   useKinectSpace: 1
   smoothFactor: 5
   debugText: {fileID: 0}
@@ -521,6 +522,24 @@ MonoBehaviour:
   gestureListeners: []
   calibrationText: {fileID: 0}
   gesturesDebugText: {fileID: 0}
+--- !u!114 &181732828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181732820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da6157f022b3a36489d87a9d8323f52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1572701631}
+  spawnDelay: 0.4
+  despawnDelay: 4
+  maxSpawnCount: 6
+  spawnY: 0
+  maxY: 0.5
 --- !u!1 &432432459
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,12 +666,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572701631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.87, y: 0, z: 0}
+  m_LocalPosition: {x: -1.87, y: 0, z: -11.65}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1863150870}
   - {fileID: 1017910138}
+  - {fileID: 1863150870}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -666,7 +685,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0c912d82b4f598d4d852e634fc84f5f4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c912d82b4f598d4d852e634fc84f5f4,
         type: 3}
@@ -736,12 +755,17 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 0c912d82b4f598d4d852e634fc84f5f4,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0c912d82b4f598d4d852e634fc84f5f4,
         type: 3}
       propertyPath: m_Name
       value: animated_mushroom02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c912d82b4f598d4d852e634fc84f5f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c912d82b4f598d4d852e634fc84f5f4, type: 3}
@@ -1082,7 +1106,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1572701632}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2013410473
 GameObject:

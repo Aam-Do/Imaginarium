@@ -1,27 +1,44 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnCircle : MonoBehaviour
+public class SpawnPlants : MonoBehaviour
 {
-    public GameObject prefab; // The GameObject prefab to spawn
-    public float radius = 2f; // The radius of the circle to spawn in
-    public int numObjects = 1; // The number of objects to spawn
-    public float spacing = 0.2f; // The distance between each object
-    public float yOffset = 0f; // The distance from y=0 that the objects will spawn
-    public float yMultiplier = 1f; // The multiplier to use for the number of objects to spawn, based on the original object's y position
+    public GameObject prefab;
+    public float spawnDelay = 0.5f;
+    public float despawnDelay = 4f;
+    public int maxSpawnCount = 4;
+    public int spawnY = 0;
+    public float maxY = 2;
 
-    private void Start()
+    private float lastSpawnTime;
+    private List<GameObject> spawnedObjects = new List<GameObject>();
+
+    void Update()
     {
-        // Calculate the number of objects to spawn based on the original object's y position
-        float y = transform.position.y;
-        int numToSpawn = Mathf.RoundToInt(numObjects * (1f - Mathf.Abs(y) / radius) * yMultiplier);
-        Debug.Log(numToSpawn);
-
-        // Spawn the objects in a circle around the original object
-        for (int i = 0; i < numToSpawn; i++)
+        if (Time.time > lastSpawnTime + spawnDelay && spawnedObjects.Count < maxSpawnCount && transform.position.y >= spawnY && transform.position.y <= maxY)
         {
-            float angle = i * Mathf.PI * 2f / numToSpawn;
-            Vector3 spawnPos = new Vector3(transform.position.x + Mathf.Cos(angle) * radius, yOffset, transform.position.z + Mathf.Sin(angle) * radius);
-            Instantiate(prefab, spawnPos, Quaternion.identity, transform);
+            GameObject newObject = Instantiate(prefab, new Vector3(transform.position.x, 0f, transform.position.z), Quaternion.identity);
+            spawnedObjects.Add(newObject);
+            lastSpawnTime = Time.time;
+
+            Animator animator = newObject.transform.GetChild(0).GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.Play("growingLoop");
+                StartCoroutine(DestroyObjectAfterDelay(newObject, animator.GetCurrentAnimatorStateInfo(0).length));
+            }
+            else
+            {
+                StartCoroutine(DestroyObjectAfterDelay(newObject, despawnDelay));
+            }
         }
+    }
+
+    IEnumerator DestroyObjectAfterDelay(GameObject obj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(obj);
+        spawnedObjects.Remove(obj);
     }
 }
