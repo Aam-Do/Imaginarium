@@ -22,16 +22,7 @@ public class SpawnPlants : MonoBehaviour
             spawnedObjects.Add(newObject);
             lastSpawnTime = Time.time;
 
-            Animator animator = newObject.transform.GetChild(0).GetComponent<Animator>();
-            if (animator != null)
-            {
-                animator.Play("growingLoop");
-                StartCoroutine(DestroyObjectAfterDelay(newObject, animator.GetCurrentAnimatorStateInfo(0).length));
-            }
-            else
-            {
-                StartCoroutine(DestroyObjectAfterDelay(newObject, despawnDelay));
-            }
+            StartCoroutine(DestroyObjectAfterDelay(newObject, despawnDelay));
         }
     }
 
