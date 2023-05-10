@@ -20,7 +20,7 @@ MonoBehaviour:
     x: 793
     y: -736
     width: 857
-    height: 1975
+    height: 2013
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1899,7 +1899,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615017}
   - {fileID: 8926484042661615019}
   - {fileID: 8926484042661615024}
-  m_UIPosition: {x: 1226, y: 547}
+  m_UIPosition: {x: 1151, y: 585}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -2264,7 +2264,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":8.953310012817383,"g":19.88802719116211,"b":21.112125396728517,"a":1.0},"time":0.06176852062344551},{"color":{"r":0.480775386095047,"g":2.6994450092315676,"b":30.60942268371582,"a":1.0},"time":0.29117265343666079},{"color":{"r":0.8782409429550171,"g":0.05917629227042198,"b":3.767564296722412,"a":1.0},"time":0.6235294342041016},{"color":{"r":0.3119799494743347,"g":0.0,"b":0.0013795068953186274,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.06764324754476547},{"alpha":1.0,"time":0.08235294371843338},{"alpha":1.0,"time":0.7676509022712708},{"alpha":0.0,"time":0.9882352948188782}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":8.953310012817383,"g":19.88802719116211,"b":21.112125396728517,"a":1.0},"time":0.2647135257720947},{"color":{"r":0.480775386095047,"g":2.6994450092315676,"b":30.60942268371582,"a":1.0},"time":0.29117265343666079},{"color":{"r":0.8782409429550171,"g":0.05917629227042198,"b":3.767564296722412,"a":1.0},"time":0.6235294342041016},{"color":{"r":0.3119799494743347,"g":0.0,"b":0.0013795068953186274,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.06764324754476547},{"alpha":1.0,"time":0.08235294371843338},{"alpha":1.0,"time":0.7676509022712708},{"alpha":0.0,"time":0.9882352948188782}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: Color
