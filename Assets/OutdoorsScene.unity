@@ -1009,10 +1009,10 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0.7980125, y: 0.20989968, z: 46.27125}
+      - m_Value: {x: -0, y: 0, z: 0}
         m_Name: Transform_angles
         m_Overridden: 1
-      - m_Value: {x: 1.5030465, y: -0.862555, z: -2.0994356}
+      - m_Value: {x: 1.991919, y: -0.8512268, z: -2.1077402}
         m_Name: Transform_position
         m_Overridden: 1
       - m_Value: {x: 1, y: 1, z: 1}
@@ -1537,6 +1537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 226882449911542405, guid: 064c87e967542194e8567bc76ddde895,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2997179712245283840, guid: 064c87e967542194e8567bc76ddde895,
         type: 3}
