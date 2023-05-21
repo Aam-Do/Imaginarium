@@ -13,6 +13,7 @@ public class CreateNewRenText : MonoBehaviour
     {
         // Create the RenderTexture
         RenderTexture renderTexture = new RenderTexture(textureWidth, textureHeight, 0, textureFormat);
+        renderTexture.Create();
 
         // Assign the RenderTexture to the "SDF Texture" component if it exists
         SDFTexture sdfTexture = GetComponent<SDFTexture>();
