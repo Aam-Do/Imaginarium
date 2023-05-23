@@ -3,7 +3,7 @@ using System.Timers;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class apllause : MonoBehaviour
+public class Applause : MonoBehaviour
 {
     public int playerIndex = 0;
     public KinectInterop.JointType joint = KinectInterop.JointType.HandRight;
@@ -12,8 +12,7 @@ public class apllause : MonoBehaviour
     public Vector3 jointPosition2;
     public GameObject particlespawn;
 
-
-    public float scaleFactor = 6f;
+    public float scaleFactor = 60f;
     public float duration = 1f;
     public float originalScalex;
     private float originalScaley;
@@ -23,20 +22,12 @@ public class apllause : MonoBehaviour
     public float distancey;
     public float distancez;
 
-
-
-
-
     // Start is called before the first frame update
     void Start()
     {
         originalScalex = particlespawn.transform.localScale.x;
         originalScaley = particlespawn.transform.localScale.y;
         originalScalez = particlespawn.transform.localScale.z;
-
-
-
-
     }
 
     // Update is called once per frame
@@ -75,18 +66,9 @@ public class apllause : MonoBehaviour
                         distancez *= (-1);
                     }
 
-
-
-
-
-
-
                     if (distancex <= 0.1 && distancey <= 0.1 && distancez <= 0.1)
                     {
                         particlespawn.transform.localScale = new Vector3(originalScalex * scaleFactor, originalScaley * scaleFactor, originalScalez);
-
-
-
                     }
                     else
                     {

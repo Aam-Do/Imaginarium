@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class velocity : MonoBehaviour
+public class Velocity : MonoBehaviour
 {
     public Vector3 PrevPos;
     public Vector3 NewPos;
