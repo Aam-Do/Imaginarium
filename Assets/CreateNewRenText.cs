@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class CreateNewRenText : MonoBehaviour
 {
@@ -17,12 +18,17 @@ public class CreateNewRenText : MonoBehaviour
 
         // Assign the RenderTexture to the "SDF Texture" component if it exists
         SDFTexture sdfTexture = GetComponent<SDFTexture>();
-        Debug.Log(sdfTexture);
-        Debug.Log(sdfTexture.sdf);
         if (sdfTexture != null)
         {
             sdfTexture.sdf = renderTexture;
             Debug.Log(sdfTexture.sdf);
+        }
+
+        // GameObject particleSystem = transform.GetChild(1).gameObject;
+        VisualEffect particleSystem = GetComponent<VisualEffect>();
+        if (particleSystem != null)
+        {
+            particleSystem.SetTexture("SDF", renderTexture);
         }
     }
 
