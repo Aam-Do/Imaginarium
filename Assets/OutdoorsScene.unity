@@ -540,7 +540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6157f022b3a36489d87a9d8323f52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5954448367812939510, guid: 064c87e967542194e8567bc76ddde895, type: 3}
+  prefabs:
+  - {fileID: 2310458782972047994, guid: 5489714c5eafc214b8550c32f373fd74, type: 3}
+  - {fileID: 5954448367812939510, guid: 064c87e967542194e8567bc76ddde895, type: 3}
   spawnDelay: 0.4
   despawnDelay: 4
   maxSpawnCount: 6
@@ -664,7 +666,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 66ec0e3cd840549808ee52d92eb87c88,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66ec0e3cd840549808ee52d92eb87c88,
         type: 3}
@@ -875,7 +877,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963028439
 MonoBehaviour:
@@ -889,12 +891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44a4cd4e71dd7f47a9266ebc38cff0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrevPos: {x: 0, y: 0, z: 0}
-  NewPos: {x: 0, y: 0, z: 0}
-  ObjVelocity: {x: 0, y: 0, z: 0}
-  magnitude: 0
-  targetVelocity: 10
-  messageToSend: Object reached target velocity!
 --- !u!54 &963028440
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -944,7 +940,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1376753128
 MonoBehaviour:
@@ -958,12 +954,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44a4cd4e71dd7f47a9266ebc38cff0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrevPos: {x: 0, y: 0, z: 0}
-  NewPos: {x: 0, y: 0, z: 0}
-  ObjVelocity: {x: 0, y: 0, z: 0}
-  magnitude: 1.64
-  targetVelocity: 10
-  messageToSend: Object reached target velocity!
 --- !u!114 &1376753129
 MonoBehaviour:
   m_ObjectHideFlags: 0
