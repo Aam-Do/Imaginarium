@@ -581,7 +581,7 @@ MonoBehaviour:
   jointPosition: {x: 0, y: 0, z: 0}
   jointPosition2: {x: 0, y: 0, z: 0}
   particlespawn: {fileID: 181732820}
-  scaleFactor: 0
+  scaleFactor: 60
   duration: 1
   originalScalex: 0
   distancex: 0
@@ -790,6 +790,8 @@ GameObject:
   - component: {fileID: 963028436}
   - component: {fileID: 963028440}
   - component: {fileID: 963028439}
+  - component: {fileID: 963028441}
+  - component: {fileID: 963028442}
   m_Layer: 0
   m_Name: rightHand
   m_TagString: Untagged
@@ -911,6 +913,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &963028441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963028435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1b10ec54ed18a4a9fd436da22030b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 0
+  gestureInfo: {fileID: 0}
+--- !u!114 &963028442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963028435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e10bac9455237041a1b985ed6f49a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenCamera: {fileID: 0}
+  slideChangeWithGestures: 1
+  spinSpeed: 5
+  cubeSides: []
+  particlestuff: {fileID: 181732820}
+  initialRotation: 0
+  activeswipe: 0
+  posPart: {x: 0, y: 0, z: 0}
 --- !u!1 &1376753126
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +960,8 @@ GameObject:
   - component: {fileID: 1376753129}
   - component: {fileID: 1376753128}
   - component: {fileID: 1376753131}
+  - component: {fileID: 1376753133}
+  - component: {fileID: 1376753132}
   m_Layer: 0
   m_Name: leftHand
   m_TagString: Untagged
@@ -1046,6 +1084,32 @@ MonoBehaviour:
   _dataSource: {fileID: 1376753128}
   _propertyName: tag
   _keepSending: 0
+--- !u!114 &1376753132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376753126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1b10ec54ed18a4a9fd436da22030b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 0
+  gestureInfo: {fileID: 0}
+--- !u!114 &1376753133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376753126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b976a1901bb5d478901026c07729cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1641580080
 GameObject:
   m_ObjectHideFlags: 0
