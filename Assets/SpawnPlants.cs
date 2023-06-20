@@ -5,12 +5,12 @@ using UnityEngine;
 public class SpawnPlants : MonoBehaviour
 {
     public GameObject[] prefabs;
-    public float spawnDelay = 0.2f;
+    public float spawnDelay = 6f;
+    public float maxSpawnRate = 0.1f;
+    public float spawnDistanceThreshold = 4f;
     public float despawnDelay = 4f;
-    public int maxSpawnCount = 15;
     public int spawnY = 0;
     public float spawnRadius = 1f;
-    public float maxY = 2;
 
     private float lastSpawnTime;
     private List<GameObject> spawnedObjects = new List<GameObject>();
@@ -19,16 +19,20 @@ public class SpawnPlants : MonoBehaviour
     {
         if (prefabs != null && prefabs.Length > 0)
         {
-            if (Time.time > lastSpawnTime + spawnDelay && spawnedObjects.Count < maxSpawnCount && transform.position.y >= spawnY && transform.position.y <= maxY)
+            if (Time.time > lastSpawnTime + GetSpawnRate())
             {
-                int randomIndex = Random.Range(0, prefabs.Length);
-                Vector2 randomOffset = Random.insideUnitCircle * spawnRadius;
-                GameObject prefab = prefabs[randomIndex];
-                GameObject newObject = Instantiate(prefab, new Vector3(transform.position.x + randomOffset.x, 0f, transform.position.z + randomOffset.y), Quaternion.identity);
-                spawnedObjects.Add(newObject);
-                lastSpawnTime = Time.time;
+                // Check if the object's position is within the desired range
+                if (transform.position.y <= spawnDistanceThreshold && transform.position.y >= spawnY)
+                {
+                    int randomIndex = Random.Range(0, prefabs.Length);
+                    Vector2 randomOffset = Random.insideUnitCircle * spawnRadius;
+                    GameObject prefab = prefabs[randomIndex];
+                    GameObject newObject = Instantiate(prefab, new Vector3(transform.position.x + randomOffset.x, 0f, transform.position.z + randomOffset.y), Quaternion.identity);
+                    spawnedObjects.Add(newObject);
 
-                StartCoroutine(DestroyObjectAfterDelay(newObject, despawnDelay));
+                    StartCoroutine(DestroyObjectAfterDelay(newObject, despawnDelay));
+                }
+                lastSpawnTime = Time.time;
             }
         }
     }
@@ -38,5 +42,12 @@ public class SpawnPlants : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Destroy(obj);
         spawnedObjects.Remove(obj);
+    }
+
+    private float GetSpawnRate()
+    {
+        // Calculate the spawn rate based on the distance from y = 0
+        float spawnRate = Mathf.Lerp(spawnDelay, maxSpawnRate, transform.position.y / spawnDistanceThreshold);
+        return spawnRate;
     }
 }

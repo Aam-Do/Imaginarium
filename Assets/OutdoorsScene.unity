@@ -543,12 +543,12 @@ MonoBehaviour:
   prefabs:
   - {fileID: 2310458782972047994, guid: 5489714c5eafc214b8550c32f373fd74, type: 3}
   - {fileID: 5954448367812939510, guid: 064c87e967542194e8567bc76ddde895, type: 3}
-  spawnDelay: 0.4
+  spawnDelay: 0.05
+  maxSpawnRate: 6
+  spawnDistanceThreshold: 4
   despawnDelay: 4
-  maxSpawnCount: 6
   spawnY: 0
   spawnRadius: 1
-  maxY: 0.5
 --- !u!114 &181732829
 MonoBehaviour:
   m_ObjectHideFlags: 0
