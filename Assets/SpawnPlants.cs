@@ -10,7 +10,8 @@ public class SpawnPlants : MonoBehaviour
     public float spawnDistanceThreshold = 4f;
     public float despawnDelay = 4f;
     public int spawnY = 0;
-    public float spawnRadius = 1f;
+    public float maxSpawnRadius = 2f;
+    public float minSpawnRadius = 0.3f;
 
     private float lastSpawnTime;
     private List<GameObject> spawnedObjects = new List<GameObject>();
@@ -25,9 +26,12 @@ public class SpawnPlants : MonoBehaviour
                 if (transform.position.y <= spawnDistanceThreshold && transform.position.y >= spawnY)
                 {
                     int randomIndex = Random.Range(0, prefabs.Length);
-                    Vector2 randomOffset = Random.insideUnitCircle * spawnRadius;
                     GameObject prefab = prefabs[randomIndex];
-                    GameObject newObject = Instantiate(prefab, new Vector3(transform.position.x + randomOffset.x, 0f, transform.position.z + randomOffset.y), Quaternion.identity);
+                    // Calculate the spawn position within a varying radius based on the object's y-coordinate
+                    float spawnRadius = Mathf.Lerp(maxSpawnRadius, minSpawnRadius, Mathf.Abs(transform.position.y - 0.5f));
+                    Vector3 spawnPosition = transform.position + Random.insideUnitSphere * spawnRadius;
+                    spawnPosition.y = 0f;
+                    GameObject newObject = Instantiate(prefab, spawnPosition, Quaternion.identity);
                     spawnedObjects.Add(newObject);
 
                     StartCoroutine(DestroyObjectAfterDelay(newObject, despawnDelay));
