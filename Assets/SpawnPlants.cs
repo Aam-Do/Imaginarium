@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpawnPlants : MonoBehaviour
 {
-    public GameObject prefab;
-    public float spawnDelay = 0.5f;
+    public GameObject[] prefabs;
+    public float spawnDelay = 0.3f;
     public float despawnDelay = 4f;
-    public int maxSpawnCount = 4;
+    public int maxSpawnCount = 10;
     public int spawnY = 0;
     public float maxY = 2;
 
@@ -16,13 +16,18 @@ public class SpawnPlants : MonoBehaviour
 
     void Update()
     {
-        if (Time.time > lastSpawnTime + spawnDelay && spawnedObjects.Count < maxSpawnCount && transform.position.y >= spawnY && transform.position.y <= maxY)
+        if (prefabs != null && prefabs.Length > 0)
         {
-            GameObject newObject = Instantiate(prefab, new Vector3(transform.position.x, 0f, transform.position.z), Quaternion.identity);
-            spawnedObjects.Add(newObject);
-            lastSpawnTime = Time.time;
+            if (Time.time > lastSpawnTime + spawnDelay && spawnedObjects.Count < maxSpawnCount && transform.position.y >= spawnY && transform.position.y <= maxY)
+            {
+                int randomIndex = Random.Range(0, prefabs.Length);
+                GameObject prefab = prefabs[randomIndex];
+                GameObject newObject = Instantiate(prefab, new Vector3(transform.position.x, 0f, transform.position.z), Quaternion.identity);
+                spawnedObjects.Add(newObject);
+                lastSpawnTime = Time.time;
 
-            StartCoroutine(DestroyObjectAfterDelay(newObject, despawnDelay));
+                StartCoroutine(DestroyObjectAfterDelay(newObject, despawnDelay));
+            }
         }
     }
 
