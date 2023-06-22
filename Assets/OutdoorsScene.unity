@@ -452,7 +452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181732820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.89, y: 0.65, z: 0}
+  m_LocalPosition: {x: 1.371, y: 2.374, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -794,8 +794,6 @@ GameObject:
   - component: {fileID: 963028436}
   - component: {fileID: 963028440}
   - component: {fileID: 963028439}
-  - component: {fileID: 963028441}
-  - component: {fileID: 963028442}
   m_Layer: 0
   m_Name: rightHand
   m_TagString: Untagged
@@ -895,6 +893,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44a4cd4e71dd7f47a9266ebc38cff0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrevPos: {x: 0, y: 0, z: 0}
+  NewPos: {x: 0, y: 0, z: 0}
+  ObjVelocity: {x: 0, y: 0, z: 0}
+  magnitude: 0
+  targetVelocity: 10
+  messageToSend: Object reached target velocity!
 --- !u!54 &963028440
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -960,6 +964,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44a4cd4e71dd7f47a9266ebc38cff0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrevPos: {x: 0, y: 0, z: 0}
+  NewPos: {x: 0, y: 0, z: 0}
+  ObjVelocity: {x: 0, y: 0, z: 0}
+  magnitude: 0
+  targetVelocity: 10
+  messageToSend: Object reached target velocity!
 --- !u!114 &1376753129
 MonoBehaviour:
   m_ObjectHideFlags: 0
