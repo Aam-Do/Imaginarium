@@ -452,7 +452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181732820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.89, y: 0.65, z: 0}
+  m_LocalPosition: {x: 1.371, y: 2.374, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -586,7 +586,7 @@ MonoBehaviour:
   jointPosition: {x: 0, y: 0, z: 0}
   jointPosition2: {x: 0, y: 0, z: 0}
   particlespawn: {fileID: 181732820}
-  scaleFactor: 0
+  scaleFactor: 60
   duration: 1
   originalScalex: 0
   distancex: 0
@@ -894,6 +894,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44a4cd4e71dd7f47a9266ebc38cff0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrevPos: {x: 0, y: 0, z: 0}
+  NewPos: {x: 0, y: 0, z: 0}
+  ObjVelocity: {x: 0, y: 0, z: 0}
+  magnitude: 0
+  targetVelocity: 10
+  messageToSend: Object reached target velocity!
 --- !u!54 &963028440
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -923,6 +929,8 @@ GameObject:
   - component: {fileID: 1376753129}
   - component: {fileID: 1376753128}
   - component: {fileID: 1376753131}
+  - component: {fileID: 1376753133}
+  - component: {fileID: 1376753132}
   m_Layer: 0
   m_Name: leftHand
   m_TagString: Untagged
@@ -957,6 +965,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44a4cd4e71dd7f47a9266ebc38cff0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrevPos: {x: 0, y: 0, z: 0}
+  NewPos: {x: 0, y: 0, z: 0}
+  ObjVelocity: {x: 0, y: 0, z: 0}
+  magnitude: 0
+  targetVelocity: 10
+  messageToSend: Object reached target velocity!
 --- !u!114 &1376753129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,6 +1053,32 @@ MonoBehaviour:
   _dataSource: {fileID: 1376753128}
   _propertyName: tag
   _keepSending: 0
+--- !u!114 &1376753132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376753126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1b10ec54ed18a4a9fd436da22030b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 0
+  gestureInfo: {fileID: 0}
+--- !u!114 &1376753133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376753126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b976a1901bb5d478901026c07729cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1641580080
 GameObject:
   m_ObjectHideFlags: 0
