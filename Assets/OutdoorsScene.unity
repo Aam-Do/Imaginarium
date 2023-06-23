@@ -544,6 +544,7 @@ MonoBehaviour:
   - {fileID: 2310458782972047994, guid: 5489714c5eafc214b8550c32f373fd74, type: 3}
   - {fileID: 5954448367812939510, guid: 064c87e967542194e8567bc76ddde895, type: 3}
   - {fileID: 7110040628558607794, guid: 63d36e5961cfc6d49aa17c13275a5387, type: 3}
+  - {fileID: 7110040628558607794, guid: d7d2991519ebad24d98ef354275eb87c, type: 3}
   spawnDelay: 0.05
   maxSpawnRate: 6
   spawnDistanceThreshold: 4
@@ -894,12 +895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44a4cd4e71dd7f47a9266ebc38cff0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrevPos: {x: 0, y: 0, z: 0}
-  NewPos: {x: 0, y: 0, z: 0}
-  ObjVelocity: {x: 0, y: 0, z: 0}
-  magnitude: 0
-  targetVelocity: 10
-  messageToSend: Object reached target velocity!
 --- !u!54 &963028440
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -965,12 +960,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44a4cd4e71dd7f47a9266ebc38cff0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrevPos: {x: 0, y: 0, z: 0}
-  NewPos: {x: 0, y: 0, z: 0}
-  ObjVelocity: {x: 0, y: 0, z: 0}
-  magnitude: 0
-  targetVelocity: 10
-  messageToSend: Object reached target velocity!
 --- !u!114 &1376753129
 MonoBehaviour:
   m_ObjectHideFlags: 0
