@@ -25,7 +25,7 @@ public class CreateNewRenText : MonoBehaviour
         }
 
         // GameObject particleSystem = transform.GetChild(1).gameObject;
-        VisualEffect particleSystem = GetComponent<VisualEffect>();
+        VisualEffect particleSystem = transform.GetChild(1).gameObject.GetComponent<VisualEffect>();
         if (particleSystem != null)
         {
             particleSystem.SetTexture("SDF", renderTexture);

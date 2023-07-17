@@ -33,13 +33,14 @@ public class SpawnPlants : MonoBehaviour
                     float spawnRadius = Mathf.Lerp(maxSpawnRadius, minSpawnRadius, Mathf.Abs(transform.position.y - 0.5f));
                     Vector3 spawnPosition = transform.position + Random.insideUnitSphere * spawnRadius;
                     spawnPosition.y = 0f;
+                    spawnPosition.z = 0f;
                     // scaling
                     float randomScale = Random.Range(minScale, maxScale);
                     Vector3 scale = new Vector3(
                     randomScale, randomScale, randomScale
                     );
                     GameObject newObject = Instantiate(prefab, spawnPosition, Quaternion.identity);
-                    newObject.transform.localScale = scale;
+                    newObject.transform.GetChild(1).gameObject.transform.localScale = scale;
                     spawnedObjects.Add(newObject);
 
                     StartCoroutine(DestroyObjectAfterDelay(newObject, despawnDelay));
