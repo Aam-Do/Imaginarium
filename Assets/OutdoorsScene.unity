@@ -979,14 +979,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: -4.18}
+  m_LocalRotation: {x: -0.032866526, y: -0, z: -0, w: 0.9994598}
+  m_LocalPosition: {x: 1.128, y: 0.47, z: -2.934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.767, y: 0, z: 0}
 --- !u!114 &1823688468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,6 +1539,17 @@ PrefabInstance:
       propertyPath: minScale
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754245, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: prefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754245, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: prefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 7110040628558607794, guid: 3ce09669e2681d64e89212189d5e1f91,
+        type: 3}
     - target: {fileID: 8392319627514754246, guid: 14ba916bf325fdb4f93bbd095dda828a,
         type: 3}
       propertyPath: foregroundCamera
