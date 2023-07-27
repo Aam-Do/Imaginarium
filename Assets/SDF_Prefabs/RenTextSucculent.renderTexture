@@ -15,7 +15,7 @@ RenderTexture:
   m_IsAlphaChannelOptional: 0
   serializedVersion: 5
   m_Width: 64
-  m_Height: 42
+  m_Height: 51
   m_AntiAliasing: 1
   m_MipCount: -1
   m_DepthStencilFormat: 0
@@ -35,5 +35,5 @@ RenderTexture:
     m_WrapV: 1
     m_WrapW: 1
   m_Dimension: 3
-  m_VolumeDepth: 58
+  m_VolumeDepth: 65
   m_ShadowSamplingMode: 2
