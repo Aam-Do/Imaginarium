@@ -1749,6 +1749,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8392319627514754245, guid: 14ba916bf325fdb4f93bbd095dda828a,
         type: 3}
+      propertyPath: despawnDelayMax
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754245, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: despawnDelayMin
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754245, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
       propertyPath: prefabs.Array.size
       value: 5
       objectReference: {fileID: 0}

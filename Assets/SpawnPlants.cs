@@ -8,7 +8,8 @@ public class SpawnPlants : MonoBehaviour
     public float spawnDelay = 6f;
     public float maxSpawnRate = 0.1f;
     public float spawnDistanceThreshold = 4f;
-    public float despawnDelay = 4f;
+    public float despawnDelayMin = 4f;
+    public float despawnDelayMax = 7f;
     public int spawnY = 0;
     public float maxSpawnRadius = 2f;
     public float minSpawnRadius = 0.3f;
@@ -41,6 +42,15 @@ public class SpawnPlants : MonoBehaviour
                     );
                     GameObject newObject = Instantiate(prefab, spawnPosition, Quaternion.identity);
                     newObject.transform.GetChild(1).gameObject.transform.localScale = scale;
+
+                    float despawnDelay = Random.Range(despawnDelayMin, despawnDelayMax);
+
+                    // Get the Animator component from the new object
+                    Animator animator = newObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
+
+                    // Set the animation length to a random value
+                    animator.SetFloat("AnimationSpeed", 1f / despawnDelay);
+                    
                     spawnedObjects.Add(newObject);
 
                     StartCoroutine(DestroyObjectAfterDelay(newObject, despawnDelay));
