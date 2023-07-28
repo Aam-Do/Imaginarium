@@ -52,6 +52,11 @@ public class SpawnPlants : MonoBehaviour
 
     IEnumerator DestroyObjectAfterDelay(GameObject obj, float delay)
     {
+        Debug.Log("enter destroy function");
+        Animator animator = obj.transform.GetChild(0).gameObject.GetComponent<Animator>();
+        Debug.Log(animator);
+        // Wait until the object is not in transition (animation has finished)
+        yield return new WaitUntil(() => !animator.IsInTransition(0));
         yield return new WaitForSeconds(delay);
         Destroy(obj);
         spawnedObjects.Remove(obj);
