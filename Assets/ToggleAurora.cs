@@ -114,6 +114,8 @@ public class ToggleAurora : MonoBehaviour
     }
     private IEnumerator FadeInAurora()
     {
+        // Reactivate the aurora GameObject
+        aurora.SetActive(true);
         float startTime = Time.time;
 
         while (Time.time < startTime + fadeInDuration)
@@ -136,8 +138,6 @@ public class ToggleAurora : MonoBehaviour
             childMaterials[i].SetFloat("_Alpha", startAlphaValues[i]);
         }
 
-        // Reactivate the aurora GameObject
-        aurora.SetActive(true);
-        isFading = true;
+        isFading = false;
     }
 }
