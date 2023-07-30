@@ -94,6 +94,7 @@ Material:
     m_Floats:
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
+    - _Alpha: 1
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 1
@@ -106,7 +107,7 @@ Material:
     - _CullModeForward: 2
     - _Cutoff: 0.5
     - _DepthOffsetEnable: 0
-    - _DissolvePower: 1.5
+    - _DissolvePower: -2.17
     - _DistortionBlendMode: 0
     - _DistortionBlurBlendMode: 0
     - _DistortionBlurDstBlend: 1
@@ -132,8 +133,8 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _IncludeIndirectLighting: 1
-    - _MaskPower: 0.66
-    - _NoiseScale: 30
+    - _MaskPower: 1.31
+    - _NoiseScale: 42.3
     - _OpaqueCullMode: 2
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -165,13 +166,13 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0, g: 5.613428, b: 15.316639, a: 1}
+    - _Color: {r: 0.6181746, g: 0.059439868, b: 1.1353015, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _NoiseSpeed: {r: 0, g: -0.025, b: 0, a: 0}
-    - _Noise_Tiling: {r: 7, g: 0.1, b: 0, a: 0}
+    - _Noise_Tiling: {r: 3, g: 0.1, b: 0, a: 0}
     - _UnlitColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnlitColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

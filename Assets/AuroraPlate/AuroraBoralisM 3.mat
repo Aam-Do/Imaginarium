@@ -42,10 +42,11 @@ Material:
   m_ValidKeywords:
   - _ENABLE_FOG_ON_TRANSPARENT
   - _SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _DOUBLESIDED_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 3000
   stringTagMap:
     MotionVector: User
@@ -94,6 +95,7 @@ Material:
     m_Floats:
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
+    - _Alpha: 0.14
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 1
@@ -102,11 +104,11 @@ Material:
     - _AlphaToMaskInspectorValue: 0
     - _BlendMode: 1
     - _ConservativeDepthOffsetEnable: 0
-    - _CullMode: 2
-    - _CullModeForward: 2
+    - _CullMode: 0
+    - _CullModeForward: 0
     - _Cutoff: 0.5
     - _DepthOffsetEnable: 0
-    - _DissolvePower: 1.5
+    - _DissolvePower: 1.62
     - _DistortionBlendMode: 0
     - _DistortionBlurBlendMode: 0
     - _DistortionBlurDstBlend: 1
@@ -122,7 +124,7 @@ Material:
     - _DistortionSrcBlend: 1
     - _DistortionVectorBias: -1
     - _DistortionVectorScale: 2
-    - _DoubleSidedEnable: 0
+    - _DoubleSidedEnable: 1
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 1
@@ -133,7 +135,7 @@ Material:
     - _EnableFogOnTransparent: 1
     - _IncludeIndirectLighting: 1
     - _MaskPower: 0.66
-    - _NoiseScale: 30
+    - _NoiseScale: 27.03
     - _OpaqueCullMode: 2
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -159,19 +161,19 @@ Material:
     - _TransparentZWrite: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
-    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestDepthEqualForOpaque: 6
     - _ZTestGBuffer: 4
     - _ZTestModeDistortion: 4
-    - _ZTestTransparent: 4
+    - _ZTestTransparent: 6
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 9.216979, g: 4.5425878, b: 74.079094, a: 1}
+    - _Color: {r: 22.064075, g: 2.2824907, b: 105.7554, a: 0.9843137}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
-    - _NoiseSpeed: {r: 0, g: -0.025, b: 0, a: 0}
-    - _Noise_Tiling: {r: 7, g: 0.1, b: 0, a: 0}
+    - _NoiseSpeed: {r: 0, g: -0.035, b: 0, a: 0}
+    - _Noise_Tiling: {r: 3.5, g: 0.1, b: 0, a: 0}
     - _UnlitColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnlitColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
