@@ -28,7 +28,7 @@ public class SpawnPlants : MonoBehaviour
             if (Time.time > lastSpawnTime + GetSpawnRate())
             {
                 // Check if the object's position is within the desired range
-                if (transform.position.y <= spawnDistanceThreshold && transform.position.y >= spawnY)
+                if (transform.position.y <= spawnDistanceThreshold && transform.position.y >= 0.8f)
                 {
                     int randomIndex = Random.Range(0, prefabs.Length);
                     GameObject prefab = prefabs[randomIndex];

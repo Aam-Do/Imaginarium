@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.VFX;
 
-public class Velocity : MonoBehaviour
+public class GetVelocity : MonoBehaviour
 {
     private Vector3 previousPosition;
     private Vector3 currentVelocity;
@@ -21,18 +21,18 @@ public class Velocity : MonoBehaviour
 
         // Update the previous position to the current position for the next frame
         previousPosition = currentPosition;
-        Debug.Log(currentVelocity);
+        // Debug.Log(currentVelocity);
 
         if (visualEffect.enabled == true)
         {
-            visualEffect.SetVector3("Velocity", currentVelocity);
+            // visualEffect.SetVector3("Velocity", currentVelocity);
         }
 
     }
 
     // You can access the current velocity from other scripts or components
-    // public Vector3 GetCurrentVelocity()
-    // {
-    //     return currentVelocity;
-    // }
+    public Vector3 GetCurrentVelocity()
+    {
+        return currentVelocity;
+    }
 }

@@ -1,0 +1,5 @@
+Joint position view:
+	Transform offset
+Applause:
+	Schwelle -> Geschwindigkeit
+	xwerthandaus -> ausgestreckte hände
