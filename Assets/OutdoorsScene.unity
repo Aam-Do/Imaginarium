@@ -577,6 +577,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8392319627343638809}
   m_PrefabAsset: {fileID: 0}
+--- !u!2083052967 &920105308 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 8392319627514754254, guid: 14ba916bf325fdb4f93bbd095dda828a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8392319627343638809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &920105310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920105297}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d44a4cd4e71dd7f47a9266ebc38cff0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualEffect: {fileID: 920105308}
 --- !u!1 &963028435
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,17 +653,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963028435}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d44a4cd4e71dd7f47a9266ebc38cff0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrevPos: {x: 0, y: 0, z: 0}
-  NewPos: {x: 0, y: 0, z: 0}
-  ObjVelocity: {x: 0, y: 0, z: 0}
-  magnitude: 0
-  targetVelocity: 10
-  messageToSend: Object reached target velocity!
+  visualEffect: {fileID: 0}
 --- !u!54 &963028440
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -804,17 +818,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376753126}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d44a4cd4e71dd7f47a9266ebc38cff0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrevPos: {x: 0, y: 0, z: 0}
-  NewPos: {x: 0, y: 0, z: 0}
-  ObjVelocity: {x: 0, y: 0, z: 0}
-  magnitude: 0
-  targetVelocity: 10
-  messageToSend: Object reached target velocity!
+  visualEffect: {fileID: 0}
 --- !u!114 &1376753129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2060,6 +2069,11 @@ PrefabInstance:
     - target: {fileID: 8392319627514754254, guid: 14ba916bf325fdb4f93bbd095dda828a,
         type: 3}
       propertyPath: m_ResetSeedOnPlay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754254, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Overridden
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8392319627514754255, guid: 14ba916bf325fdb4f93bbd095dda828a,

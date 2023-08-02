@@ -1,35 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Velocity : MonoBehaviour
 {
-    public Vector3 PrevPos;
-    public Vector3 NewPos;
-    public Vector3 ObjVelocity;
+    private Vector3 previousPosition;
+    private Vector3 currentVelocity;
+    public VisualEffect visualEffect;
 
-    public float magnitude;
-    public float targetVelocity = 10f; // The desired velocity threshold
-    public string messageToSend = "Object reached target velocity!"; // The message to send
-
-    private void Start()
+    void Start()
     {
-        PrevPos = transform.position;
-        NewPos = transform.position;
+        // Initialize the previous position to the starting position of the game object
+        previousPosition = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // Calculate the current velocity based on the change in position
+        Vector3 currentPosition = transform.position;
+        currentVelocity = (currentPosition - previousPosition) / Time.deltaTime;
 
+        // Update the previous position to the current position for the next frame
+        previousPosition = currentPosition;
+        Debug.Log(currentVelocity);
+
+        if (visualEffect.enabled == true)
+        {
+            visualEffect.SetVector3("Velocity", currentVelocity);
+        }
 
     }
 
-    void FixedUpdate()
-    {
-        NewPos = transform.position;  // each frame track the new position
-        ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  // velocity = dist/time
-        magnitude = ObjVelocity.magnitude;
-        PrevPos = NewPos;  // update position for next frame calculation
-    }
+    // You can access the current velocity from other scripts or components
+    // public Vector3 GetCurrentVelocity()
+    // {
+    //     return currentVelocity;
+    // }
 }
