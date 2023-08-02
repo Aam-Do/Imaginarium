@@ -12,7 +12,7 @@ public class SpawnPlants : MonoBehaviour
     public float animationLength = 5f;
     public float minSpeed = 0.3f;
     public float maxSpeed = 1.8f;
-    public int spawnY = 0;
+    public int spawnY = -1;
     public float maxSpawnRadius = 2f;
     public float minSpawnRadius = 0.3f;
     public float minScale = 0.2f;
@@ -35,7 +35,7 @@ public class SpawnPlants : MonoBehaviour
                     // Calculate the spawn position within a varying radius based on the object's y-coordinate
                     float spawnRadius = Mathf.Lerp(maxSpawnRadius, minSpawnRadius, Mathf.Abs(transform.position.y - 0.5f));
                     Vector3 spawnPosition = transform.position + Random.insideUnitSphere * spawnRadius;
-                    spawnPosition.y = 0f;
+                    spawnPosition.y = spawnY;
                     spawnPosition.z = 2.384186e-07f;
                     // scaling
                     float randomScale = Random.Range(minScale, maxScale);

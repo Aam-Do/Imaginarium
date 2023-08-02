@@ -586,7 +586,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 963028438}
-  - component: {fileID: 963028437}
   - component: {fileID: 963028436}
   - component: {fileID: 963028440}
   - component: {fileID: 963028439}
@@ -613,55 +612,6 @@ MonoBehaviour:
   playerIndex: 0
   leftHandOverlay: {fileID: 0}
   rightHandOverlay: {fileID: 963028438}
---- !u!114 &963028437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963028435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b531f336dfee5f438f94ed501caefc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensorHeight: 1
-  sensorAngle: 0
-  autoHeightAngle: 0
-  computeUserMap: 1
-  computeColorMap: 0
-  computeInfraredMap: 0
-  displayUserMap: 0
-  displayColorMap: 0
-  displaySkeletonLines: 0
-  DisplayMapsWidthPercent: 20
-  useMultiSourceReader: 0
-  minUserDistance: 0.5
-  maxUserDistance: 0
-  maxLeftRightDistance: 0
-  maxTrackedUsers: 6
-  showTrackedUsersOnly: 1
-  userDetectionOrder: 0
-  centralPosition: {x: 0, y: 0, z: 0}
-  ignoreInferredJoints: 0
-  ignoreZCoordinates: 0
-  lateUpdateAvatars: 0
-  skipRemoteAvatars: 0
-  smoothing: 1
-  useBoneOrientationConstraints: 0
-  estimateJointVelocities: 0
-  velocitySmoothing: 2
-  allowTurnArounds: 0
-  usersFaceBackwards: 0
-  allowedHandRotations: 1
-  avatarControllers: []
-  playerCalibrationPose: 0
-  playerCommonGestures: 
-  minTimeBetweenGestures: 0.7
-  gestureManager: {fileID: 0}
-  gestureListeners: []
-  calibrationText: {fileID: 0}
-  gesturesDebugText: {fileID: 0}
 --- !u!4 &963028438
 Transform:
   m_ObjectHideFlags: 0
@@ -717,6 +667,100 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1893924270}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1319932161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1319932164}
+  - component: {fileID: 1319932163}
+  - component: {fileID: 1319932162}
+  m_Layer: 0
+  m_Name: kinectv2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1319932162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319932161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061fc6d5018e8784c8b9696a999a2389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1319932163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319932161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b531f336dfee5f438f94ed501caefc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensorHeight: 1
+  sensorAngle: 0
+  autoHeightAngle: 0
+  computeUserMap: 1
+  computeColorMap: 0
+  computeInfraredMap: 0
+  displayUserMap: 0
+  displayColorMap: 0
+  displaySkeletonLines: 0
+  DisplayMapsWidthPercent: 20
+  useMultiSourceReader: 0
+  minUserDistance: 0.5
+  maxUserDistance: 0
+  maxLeftRightDistance: 0
+  maxTrackedUsers: 6
+  showTrackedUsersOnly: 1
+  userDetectionOrder: 1
+  centralPosition: {x: 0, y: 0, z: 0}
+  ignoreInferredJoints: 0
+  ignoreZCoordinates: 0
+  lateUpdateAvatars: 0
+  skipRemoteAvatars: 0
+  smoothing: 4
+  useBoneOrientationConstraints: 0
+  estimateJointVelocities: 0
+  velocitySmoothing: 2
+  allowTurnArounds: 0
+  usersFaceBackwards: 1
+  allowedHandRotations: 1
+  avatarControllers: []
+  playerCalibrationPose: 0
+  playerCommonGestures: 
+  minTimeBetweenGestures: 0.7
+  gestureManager: {fileID: 0}
+  gestureListeners: []
+  calibrationText: {fileID: 0}
+  gesturesDebugText: {fileID: 0}
+--- !u!4 &1319932164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319932161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.6726627, y: 3.0518703, z: 0.96864223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1376753126
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +770,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1376753127}
-  - component: {fileID: 1376753130}
   - component: {fileID: 1376753129}
   - component: {fileID: 1376753128}
   - component: {fileID: 1376753131}
@@ -788,55 +831,6 @@ MonoBehaviour:
   playerIndex: 0
   leftHandOverlay: {fileID: 1376753127}
   rightHandOverlay: {fileID: 0}
---- !u!114 &1376753130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376753126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b531f336dfee5f438f94ed501caefc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensorHeight: 1
-  sensorAngle: 0
-  autoHeightAngle: 0
-  computeUserMap: 1
-  computeColorMap: 0
-  computeInfraredMap: 0
-  displayUserMap: 0
-  displayColorMap: 0
-  displaySkeletonLines: 0
-  DisplayMapsWidthPercent: 20
-  useMultiSourceReader: 0
-  minUserDistance: 0.5
-  maxUserDistance: 0
-  maxLeftRightDistance: 0
-  maxTrackedUsers: 6
-  showTrackedUsersOnly: 1
-  userDetectionOrder: 0
-  centralPosition: {x: 0, y: 0, z: 0}
-  ignoreInferredJoints: 0
-  ignoreZCoordinates: 0
-  lateUpdateAvatars: 0
-  skipRemoteAvatars: 0
-  smoothing: 1
-  useBoneOrientationConstraints: 0
-  estimateJointVelocities: 0
-  velocitySmoothing: 2
-  allowTurnArounds: 0
-  usersFaceBackwards: 0
-  allowedHandRotations: 1
-  avatarControllers: []
-  playerCalibrationPose: 0
-  playerCommonGestures: 
-  minTimeBetweenGestures: 0.7
-  gestureManager: {fileID: 0}
-  gestureListeners: []
-  calibrationText: {fileID: 0}
-  gesturesDebugText: {fileID: 0}
 --- !u!114 &1376753131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,7 +1087,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.479, y: 1.529, z: -4.571}
+  m_LocalPosition: {x: 0, y: 2.447, z: -4.571}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1884,12 +1878,12 @@ PrefabInstance:
     - target: {fileID: 8392319627514754241, guid: 14ba916bf325fdb4f93bbd095dda828a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.397
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8392319627514754241, guid: 14ba916bf325fdb4f93bbd095dda828a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.83
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 8392319627514754241, guid: 14ba916bf325fdb4f93bbd095dda828a,
         type: 3}
@@ -1933,6 +1927,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8392319627514754242, guid: 14ba916bf325fdb4f93bbd095dda828a,
         type: 3}
+      propertyPath: allowTurnArounds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754242, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
       propertyPath: centralPosition.z
       value: 0
       objectReference: {fileID: 0}
@@ -1941,15 +1940,50 @@ PrefabInstance:
       propertyPath: ignoreZCoordinates
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754242, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: usersFaceBackwards
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754243, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754243, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: smoothFactor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754243, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: useKinectSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754243, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: relToInitialPos
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754243, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: invertedZMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754243, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: transformOffset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8392319627514754245, guid: 14ba916bf325fdb4f93bbd095dda828a,
         type: 3}
       propertyPath: maxScale
-      value: 0.9
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8392319627514754245, guid: 14ba916bf325fdb4f93bbd095dda828a,
         type: 3}
       propertyPath: minScale
-      value: 0.3
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8392319627514754245, guid: 14ba916bf325fdb4f93bbd095dda828a,
         type: 3}
@@ -2000,6 +2034,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8392319627514754246, guid: 14ba916bf325fdb4f93bbd095dda828a,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754246, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
       propertyPath: foregroundCamera
       value: 
       objectReference: {fileID: 1823688466}
@@ -2038,5 +2077,6 @@ PrefabInstance:
       propertyPath: handR
       value: 
       objectReference: {fileID: 963028435}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8392319627514754242, guid: 14ba916bf325fdb4f93bbd095dda828a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 14ba916bf325fdb4f93bbd095dda828a, type: 3}
