@@ -2,6 +2,9 @@ using System.Collections;
 using System.Timers;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
+using UnityEditor.VFX;
+using UnityEngine.Experimental.VFX;
 
 public class Applause : MonoBehaviour
 {
@@ -30,6 +33,7 @@ public class Applause : MonoBehaviour
     public bool test;
     private Vector3 previousPosition;
     private Vector3 currentVelocity;
+    public VisualEffect visualEffect;
 
 
 
@@ -91,14 +95,19 @@ public class Applause : MonoBehaviour
                     {
                         test = true;
                         particlespawn.transform.localScale = new Vector3(originalScalex * scaleFactor2, originalScaley * scaleFactor2, originalScalez);
+
+                        visualEffect.SetVector3("outputSize", new Vector3(300, 0.6f, 0.6f));
                     }
                     else if (velocityspirit.y >= schwelle || velocityspirit.y <= -schwelle)
                     {
                         particlespawn.transform.localScale = new Vector3(originalScalex * scaleFactor, originalScaley * scaleFactor, originalScalez);
+
+                        visualEffect.SetVector3("outputSize", new Vector3(0.6f, 0.6f, 0.6f));
                     }
                     else
                     {
                         particlespawn.transform.localScale = new Vector3(originalScalex, originalScaley, originalScalez);
+                        visualEffect.SetVector3("outputSize", new Vector3(0.6f, 0.6f, 0.6f));
                     }
                 }
             }
