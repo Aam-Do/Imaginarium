@@ -5,7 +5,10 @@ using UnityEngine;
 public class SpawnPlants : MonoBehaviour
 {
     public GameObject[] prefabs;
+    public GameObject plantScaleObj;
     public bool spawn = false;
+    public bool destroybool = false;
+
     public float spawnDelay = 6f;
     public float maxSpawnRate = 0.1f;
     public float spawnDistanceThreshold = 4f;
@@ -32,6 +35,18 @@ public class SpawnPlants : MonoBehaviour
                 {
                     int randomIndex = Random.Range(0, prefabs.Length);
                     GameObject prefab = prefabs[randomIndex];
+
+                    // Adjust Scaling of spirit to send data to max
+                    switch (randomIndex)
+                    {
+                        case 0: plantScaleObj.transform.localScale = new Vector3(1, 1, 1); break;
+                        case 1: plantScaleObj.transform.localScale = new Vector3(2, 2, 2); break;
+                        case 2: plantScaleObj.transform.localScale = new Vector3(3, 3, 3); break;
+                        case 3: plantScaleObj.transform.localScale = new Vector3(4, 4, 4); break;
+                        case 4: plantScaleObj.transform.localScale = new Vector3(5, 5, 5); break;
+
+                    }
+
                     // Calculate the spawn position within a varying radius based on the object's y-coordinate
                     float spawnRadius = Mathf.Lerp(maxSpawnRadius, minSpawnRadius, Mathf.Abs(transform.position.y - 0.5f));
                     Vector3 spawnPosition = transform.position + Random.insideUnitSphere * spawnRadius;
@@ -64,6 +79,8 @@ public class SpawnPlants : MonoBehaviour
                     spawnedObjects.Add(newObject);
 
                     StartCoroutine(DestroyObjectAfterDelay(newObject, despawnDelay));
+
+
                 }
                 lastSpawnTime = Time.time;
             }
@@ -74,6 +91,8 @@ public class SpawnPlants : MonoBehaviour
     {
         Animator animator = obj.transform.GetChild(0).gameObject.GetComponent<Animator>();
         yield return new WaitForSeconds(delay);
+        destroybool = true;
+        plantScaleObj.transform.position = new Vector3(1, 1, 1);
         // Ensure the animation is finished by checking the normalized time
         float normalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
         while (normalizedTime < 1f)
@@ -83,8 +102,12 @@ public class SpawnPlants : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
+
         Destroy(obj);
         spawnedObjects.Remove(obj);
+        destroybool = false;
+        plantScaleObj.transform.position = new Vector3(0, 0, 0);
+        plantScaleObj.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
     }
 
     private float GetSpawnRate()

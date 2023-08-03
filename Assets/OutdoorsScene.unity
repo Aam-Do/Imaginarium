@@ -596,6 +596,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualEffect: {fileID: 920105308}
+--- !u!4 &920105320 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8392319627514754241, guid: 14ba916bf325fdb4f93bbd095dda828a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8392319627343638809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &920105321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920105297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e43cc78b62f2184d8bebe41bd574f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connection: {fileID: 11400000, guid: 4ac380caa8042a545afcc81efd27d930, type: 2}
+  _oscAddress: /spiritScale
+  _dataSource: {fileID: 920105320}
+  _propertyName: localScale
+  _keepSending: 1
 --- !u!1 &963028435
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,6 +2129,21 @@ PrefabInstance:
       propertyPath: handR
       value: 
       objectReference: {fileID: 963028435}
+    - target: {fileID: 8392319627514754297, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754297, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: _oscAddress
+      value: /distanceXY
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392319627514754297, guid: 14ba916bf325fdb4f93bbd095dda828a,
+        type: 3}
+      propertyPath: _propertyName
+      value: localScale
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8392319627514754242, guid: 14ba916bf325fdb4f93bbd095dda828a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 14ba916bf325fdb4f93bbd095dda828a, type: 3}

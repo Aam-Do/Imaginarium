@@ -18,6 +18,7 @@ public class Applause : MonoBehaviour
     public float xwerthandaus;
 
     public float scaleFactor = 60f;
+    public float scaleFactor2 = 80f;
     public float duration = 1f;
     public float originalScalex;
     private float originalScaley;
@@ -89,7 +90,7 @@ public class Applause : MonoBehaviour
                     if (distancex >= xwerthandaus)
                     {
                         test = true;
-                        particlespawn.transform.localScale = new Vector3(originalScalex * scaleFactor, originalScaley * scaleFactor, originalScalez);
+                        particlespawn.transform.localScale = new Vector3(originalScalex * scaleFactor2, originalScaley * scaleFactor2, originalScalez);
                     }
                     else if (velocityspirit.y >= schwelle || velocityspirit.y <= -schwelle)
                     {
